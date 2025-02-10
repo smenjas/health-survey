@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Survey</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<main>
+
+<h1>Health Survey</h1>
+
+<p>This is a copy of the
+<a href="https://www.rand.org/health-care/surveys_tools/mos/36-item-short-form/survey-instrument.html">36-Item Short Form Survey Instrument (SF-36)</a>
+developed at RAND as part of the Medical Outcomes Study.
+</p>
+
+<p><strong>Choose one option for each questionnaire item.</strong></p>
+
+<form id="sf36">
+<fieldset>
+<p class="question">1. In general, would you say your health is:</p>
+<p>
+    <input type="radio" name="q1" id="q1-1">
+    <label for="q1-1">1 - Excellent</label>
+</p>
+<p>
+    <input type="radio" name="q1" id="q1-2">
+    <label for="q1-2">2 - Very good</label>
+</p>
+<p>
+    <input type="radio" name="q1" id="q1-3">
+    <label for="q1-3">3 - Good</label>
+</p>
+<p>
+    <input type="radio" name="q1" id="q1-4">
+    <label for="q1-4">4 - Fair</label>
+</p>
+<p>
+    <input type="radio" name="q1" id="q1-5">
+    <label for="q1-5">5 - Poor</label>
+</p>
+</fieldset>
+
+<fieldset>
+<p class="question">2. <strong>Compared to one year ago</strong>, how would you rate your health in general <strong>now</strong>?</p>
+<p>
+    <input type="radio" name="q2" id="q2-1">
+    <label for="q2-1">1 - Much better now than one year ago</label>
+</p>
+<p>
+    <input type="radio" name="q2" id="q2-2">
+    <label for="q2-2">2 - Somewhat better now than one year ago</label>
+</p>
+<p>
+    <input type="radio" name="q2" id="q2-3">
+    <label for="q2-3">3 - About the same</label>
+</p>
+<p>
+    <input type="radio" name="q2" id="q2-4">
+    <label for="q2-4">4 - Somewhat worse now than one year ago</label>
+</p>
+<p>
+    <input type="radio" name="q2" id="q2-5">
+    <label for="q2-5">5 - Much worse now than one year ago</label>
+</p>
+</fieldset>
+
+<div class="overflow-x">
+<fieldset>
+<p class="question">The following items are about activities you might do during a typical day. Does <strong>your health now limit you</strong> in these activities? If so, how much?</p>
+
+<table class="full">
+<thead>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <label id="activities1">Yes, limited a lot</label>
+    </td>
+    <td>
+        <label id="activities2">Yes, limited a little</label>
+    </td>
+    <td>
+        <label id="activities3">No, not limited at all</label>
+    </td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>
+        <p>3. <strong>Vigorous activities</strong>, such as running, lifting heavy objects, participating in strenuous sports</p>
+    </td>
+    <td>
+        <input type="radio" name="q3" id="q3-1" aria-labelledby="activities1">
+        <label for="q3-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q3" id="q3-2" aria-labelledby="activities2">
+        <label for="q3-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q3" id="q3-3" aria-labelledby="activities3">
+        <label for="q3-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>4. <strong>Moderate activities</strong>, such as moving a table, pushing a vacuum cleaner, bowling, or playing golf</p>
+    </td>
+    <td>
+        <input type="radio" name="q4" id="q4-1" aria-labelledby="activities1">
+        <label for="q4-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q4" id="q4-2" aria-labelledby="activities2">
+        <label for="q4-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q4" id="q4-3" aria-labelledby="activities3">
+        <label for="q4-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>5. Lifting or carrying groceries</p>
+    </td>
+    <td>
+        <input type="radio" name="q5" id="q5-1" aria-labelledby="activities1">
+        <label for="q5-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q5" id="q5-2" aria-labelledby="activities2">
+        <label for="q5-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q5" id="q5-3" aria-labelledby="activities3">
+        <label for="q5-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>6. Climbing <strong>several</strong> flights of stairs</p>
+    </td>
+    <td>
+        <input type="radio" name="q6" id="q6-1" aria-labelledby="activities1">
+        <label for="q6-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q6" id="q6-2" aria-labelledby="activities2">
+        <label for="q6-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q6" id="q6-3" aria-labelledby="activities3">
+        <label for="q6-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>7. Climbing <strong>one</strong> flight of stairs</p>
+    </td>
+    <td>
+        <input type="radio" name="q7" id="q7-1" aria-labelledby="activities1">
+        <label for="q7-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q7" id="q7-2" aria-labelledby="activities2">
+        <label for="q7-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q7" id="q7-3" aria-labelledby="activities3">
+        <label for="q7-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>8. Bending, kneeling, or stooping</p>
+    </td>
+    <td>
+        <input type="radio" name="q8" id="q8-1" aria-labelledby="activities1">
+        <label for="q8-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q8" id="q8-2" aria-labelledby="activities2">
+        <label for="q8-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q8" id="q8-3" aria-labelledby="activities3">
+        <label for="q8-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>9. Walking <strong>more than a mile</strong></p>
+    </td>
+    <td>
+        <input type="radio" name="q9" id="q9-1" aria-labelledby="activities1">
+        <label for="q9-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q9" id="q9-2" aria-labelledby="activities2">
+        <label for="q9-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q9" id="q9-3" aria-labelledby="activities3">
+        <label for="q9-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>10. Walking <strong>several blocks</strong></p>
+    </td>
+    <td>
+        <input type="radio" name="q10" id="q10-1" aria-labelledby="activities1">
+        <label for="q10-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q10" id="q10-2" aria-labelledby="activities2">
+        <label for="q10-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q10" id="q10-3" aria-labelledby="activities3">
+        <label for="q10-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>11. Walking <strong>one block</strong></p>
+    </td>
+    <td>
+        <input type="radio" name="q11" id="q11-1" aria-labelledby="activities1">
+        <label for="q11-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q11" id="q11-2" aria-labelledby="activities2">
+        <label for="q11-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q11" id="q11-3" aria-labelledby="activities3">
+        <label for="q11-3">3</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>12. Bathing or dressing yourself</p>
+    </td>
+    <td>
+        <input type="radio" name="q12" id="q12-1" aria-labelledby="activities1">
+        <label for="q12-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q12" id="q12-2" aria-labelledby="activities2">
+        <label for="q12-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q12" id="q12-3" aria-labelledby="activities3">
+        <label for="q12-3">3</label>
+    </td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+</div>
+
+<fieldset>
+<p class="question">During the <strong>past 4 weeks</strong>, have you had any of the following problems with your work or other regular daily activities <strong>as a result of your physical health</strong>?</p>
+
+<table>
+<thead>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <label id="work1">Yes</label>
+    </td>
+    <td>
+        <label id="work2">No</label>
+    </td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>
+        <p>13. Cut down the <strong>amount of time</strong> you spent on work or other activities</p>
+    </td>
+    <td>
+        <input type="radio" name="q13" id="q13-1" aria-labelledby="work1">
+        <label for="q13-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q13" id="q13-2" aria-labelledby="work2">
+        <label for="q13-2">2</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>14. <strong>Accomplished less</strong> than you would like</p>
+    </td>
+    <td>
+        <input type="radio" name="q14" id="q14-1" aria-labelledby="work1">
+        <label for="q14-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q14" id="q14-2" aria-labelledby="work2">
+        <label for="q14-2">2</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>15. Were limited in the <strong>kind</strong> of work or other activities</p>
+    </td>
+    <td>
+        <input type="radio" name="q15" id="q15-1" aria-labelledby="work1">
+        <label for="q15-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q15" id="q15-2" aria-labelledby="work2">
+        <label for="q15-2">2</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>16. Had <strong>difficulty</strong> performing the work or other activities (for example, it took extra effort)</p>
+    </td>
+    <td>
+        <input type="radio" name="q16" id="q16-1" aria-labelledby="work1">
+        <label for="q16-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q16" id="q16-2" aria-labelledby="work2">
+        <label for="q16-2">2</label>
+    </td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+
+<fieldset>
+<p class="question">During the <strong>past 4 weeks</strong>, have you had any of the following problems with your work or other regular daily activities <strong>as a result of any emotional problems</strong> (such as feeling depressed or anxious)?</p>
+
+
+<table>
+<thead>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <label id="emotions1">Yes</label>
+    </td>
+    <td>
+        <label id="emotions2">No</label>
+    </td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>
+        <p>17. Cut down the <strong>amount of time</strong> you spent on work or other activities</p>
+    </td>
+    <td>
+        <input type="radio" name="q17" id="q17-1" aria-labelledby="emotions1">
+        <label for="q17-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q17" id="q17-2" aria-labelledby="emotions2">
+        <label for="q17-2">2</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>18. <strong>Accomplished less</strong> than you would like</p>
+    </td>
+    <td>
+        <input type="radio" name="q18" id="q18-1" aria-labelledby="emotions1">
+        <label for="q18-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q18" id="q18-2" aria-labelledby="emotions2">
+        <label for="q18-2">2</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>19. Didn't do work or other activities as <strong>carefully</strong> as usual</p>
+    </td>
+    <td>
+        <input type="radio" name="q19" id="q19-1" aria-labelledby="emotions1">
+        <label for="q19-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q19" id="q19-2" aria-labelledby="emotions2">
+        <label for="q19-2">2</label>
+    </td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+
+<fieldset>
+<p class="question">20. During the <strong>past 4 weeks</strong>, to what extent has your physical health or emotional problems interfered with your normal social activities with family, friends, neighbors, or groups?</p>
+<p>
+    <input type="radio" name="q20" id="q20-1">
+    <label for="q20-1">1 - Not at all</label>
+</p>
+<p>
+    <input type="radio" name="q20" id="q20-2">
+    <label for="q20-2">2 - Slightly</label>
+</p>
+<p>
+    <input type="radio" name="q20" id="q20-3">
+    <label for="q20-3">3 - Moderately</label>
+</p>
+<p>
+    <input type="radio" name="q20" id="q20-4">
+    <label for="q20-4">4 - Quite a bit</label>
+</p>
+<p>
+    <input type="radio" name="q20" id="q20-5">
+    <label for="q20-5">5 - Extremely</label>
+</p>
+</fieldset>
+
+<fieldset>
+<p class="question">21. How much <strong>bodily</strong> pain have you had during the <strong>past 4 weeks</strong>?</p>
+<p>
+    <input type="radio" name="q21" id="q21-1">
+    <label for="q21-1">1 - None</label>
+</p>
+<p>
+    <input type="radio" name="q21" id="q21-2">
+    <label for="q21-2">2 - Very mild</label>
+</p>
+<p>
+    <input type="radio" name="q21" id="q21-3">
+    <label for="q21-3">3 - Mild</label>
+</p>
+<p>
+    <input type="radio" name="q21" id="q21-4">
+    <label for="q21-4">4 - Moderate</label>
+</p>
+<p>
+    <input type="radio" name="q21" id="q21-5">
+    <label for="q21-5">5 - Severe</label>
+</p>
+<p>
+    <input type="radio" name="q22" id="q21-6">
+    <label for="q21-6">6 - Very severe</label>
+</p>
+</fieldset>
+
+<fieldset>
+<p class="question">22. During the <strong>past 4 weeks</strong>, how much did <strong>pain</strong> interfere with your normal work (including both work outside the home and housework)?</p>
+<p>
+    <input type="radio" name="q22" id="q22-1">
+    <label for="q22-1">1 - Not at all</label>
+</p>
+<p>
+    <input type="radio" name="q22" id="q22-2">
+    <label for="q22-2">2 - A little bit</label>
+</p>
+<p>
+    <input type="radio" name="q22" id="q22-3">
+    <label for="q22-3">3 - Moderately</label>
+</p>
+<p>
+    <input type="radio" name="q22" id="q22-4">
+    <label for="q22-4">4 - Quite a bit</label>
+</p>
+<p>
+    <input type="radio" name="q22" id="q22-5">
+    <label for="q22-5">5 - Extremely</label>
+</p>
+</fieldset>
+
+<div class="overflow-x">
+<fieldset>
+<p class="question">These questions are about how you feel and how things have been with you <strong>during the past 4 weeks</strong>. For each question, please give the one answer that comes closest to the way you have been feeling.</p>
+<p>How much of the time during the <strong>past 4 weeks</strong>...</p>
+
+<table class="full">
+<thead>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <label id="past4-1">All of the time</label>
+    </td>
+    <td>
+        <label id="past4-2">Most of the time</label>
+    </td>
+    <td>
+        <label id="past4-3">A good bit of the time</label>
+    </td>
+    <td>
+        <label id="past4-4">Some of the time</label>
+    </td>
+    <td>
+        <label id="past4-5">A little of the time</label>
+    </td>
+    <td>
+        <label id="past4-6">None of the time</label>
+    </td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>
+        <p>23. Did you feel full of pep?</p>
+    </td>
+    <td>
+        <input type="radio" name="q23" id="q23-1" aria-labelledby="past4-1">
+        <label for="q23-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q23" id="q23-2" aria-labelledby="past4-2">
+        <label for="q23-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q23" id="q23-3" aria-labelledby="past4-3">
+        <label for="q23-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q23" id="q23-4" aria-labelledby="past4-4">
+        <label for="q23-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q23" id="q23-5" aria-labelledby="past4-5">
+        <label for="q23-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q23" id="q23-6" aria-labelledby="past4-6">
+        <label for="q23-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>24. Have you been a very nervous person?</p>
+    </td>
+    <td>
+        <input type="radio" name="q24" id="q24-1" aria-labelledby="past4-1">
+        <label for="q24-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q24" id="q24-2" aria-labelledby="past4-2">
+        <label for="q24-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q24" id="q24-3" aria-labelledby="past4-3">
+        <label for="q24-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q24" id="q24-4" aria-labelledby="past4-4">
+        <label for="q24-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q24" id="q24-5" aria-labelledby="past4-5">
+        <label for="q24-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q24" id="q24-6" aria-labelledby="past4-6">
+        <label for="q24-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>25. Have you felt so down in the dumps that nothing could cheer you up?</p>
+    </td>
+    <td>
+        <input type="radio" name="q25" id="q25-1" aria-labelledby="past4-1">
+        <label for="q25-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q25" id="q25-2" aria-labelledby="past4-2">
+        <label for="q25-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q25" id="q25-3" aria-labelledby="past4-3">
+        <label for="q25-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q25" id="q25-4" aria-labelledby="past4-4">
+        <label for="q25-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q25" id="q25-5" aria-labelledby="past4-5">
+        <label for="q25-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q25" id="q25-6" aria-labelledby="past4-6">
+        <label for="q25-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>26. Have you felt calm and peaceful?</p>
+    </td>
+    <td>
+        <input type="radio" name="q26" id="q26-1" aria-labelledby="past4-1">
+        <label for="q26-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q26" id="q26-2" aria-labelledby="past4-2">
+        <label for="q26-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q26" id="q26-3" aria-labelledby="past4-3">
+        <label for="q26-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q26" id="q26-4" aria-labelledby="past4-4">
+        <label for="q26-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q26" id="q26-5" aria-labelledby="past4-5">
+        <label for="q26-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q26" id="q26-6" aria-labelledby="past4-6">
+        <label for="q26-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>27. Did you have a lot of energy?</p>
+    </td>
+    <td>
+        <input type="radio" name="q27" id="q27-1" aria-labelledby="past4-1">
+        <label for="q27-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q27" id="q27-2" aria-labelledby="past4-2">
+        <label for="q27-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q27" id="q27-3" aria-labelledby="past4-3">
+        <label for="q27-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q27" id="q27-4" aria-labelledby="past4-4">
+        <label for="q27-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q27" id="q27-5" aria-labelledby="past4-5">
+        <label for="q27-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q27" id="q27-6" aria-labelledby="past4-6">
+        <label for="q27-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>28. Have you felt downhearted and blue?</p>
+    </td>
+    <td>
+        <input type="radio" name="q28" id="q28-1" aria-labelledby="past4-1">
+        <label for="q28-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q28" id="q28-2" aria-labelledby="past4-2">
+        <label for="q28-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q28" id="q28-3" aria-labelledby="past4-3">
+        <label for="q28-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q28" id="q28-4" aria-labelledby="past4-4">
+        <label for="q28-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q28" id="q28-5" aria-labelledby="past4-5">
+        <label for="q28-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q28" id="q28-6" aria-labelledby="past4-6">
+        <label for="q28-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>29. Did you feel worn out?</p>
+    </td>
+    <td>
+        <input type="radio" name="q29" id="q29-1" aria-labelledby="past4-1">
+        <label for="q29-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q29" id="q29-2" aria-labelledby="past4-2">
+        <label for="q29-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q29" id="q29-3" aria-labelledby="past4-3">
+        <label for="q29-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q29" id="q29-4" aria-labelledby="past4-4">
+        <label for="q29-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q29" id="q29-5" aria-labelledby="past4-5">
+        <label for="q29-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q29" id="q29-6" aria-labelledby="past4-6">
+        <label for="q29-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>30. Have you been a happy person?</p>
+    </td>
+    <td>
+        <input type="radio" name="q30" id="q30-1" aria-labelledby="past4-1">
+        <label for="q30-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q30" id="q30-2" aria-labelledby="past4-2">
+        <label for="q30-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q30" id="q30-3" aria-labelledby="past4-3">
+        <label for="q30-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q30" id="q30-4" aria-labelledby="past4-4">
+        <label for="q30-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q30" id="q30-5" aria-labelledby="past4-5">
+        <label for="q30-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q30" id="q30-6" aria-labelledby="past4-6">
+        <label for="q30-6">6</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>31. Did you feel tired?</p>
+    </td>
+    <td>
+        <input type="radio" name="q31" id="q31-1" aria-labelledby="past4-1">
+        <label for="q31-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q31" id="q31-2" aria-labelledby="past4-2">
+        <label for="q31-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q31" id="q31-3" aria-labelledby="past4-3">
+        <label for="q31-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q31" id="q31-4" aria-labelledby="past4-4">
+        <label for="q31-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q31" id="q31-5" aria-labelledby="past4-5">
+        <label for="q31-5">5</label>
+    </td>
+    <td>
+        <input type="radio" name="q31" id="q31-6" aria-labelledby="past4-6">
+        <label for="q31-6">6</label>
+    </td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+</div>
+
+<fieldset>
+<p class="question">32. During the <strong>past 4 weeks</strong>, how much of the time has <strong>your physical health or emotional problems</strong> interfered with your social activities (like visiting with friends, relatives, etc.)?</p>
+<p>
+    <input type="radio" name="q32" id="q32-1">
+    <label for="q32-1">1 - All of the time</label>
+</p>
+<p>
+    <input type="radio" name="q32" id="q32-2">
+    <label for="q32-2">2 - Most of the time</label>
+</p>
+<p>
+    <input type="radio" name="q32" id="q32-3">
+    <label for="q32-3">3 - Some of the time</label>
+</p>
+<p>
+    <input type="radio" name="q32" id="q32-4">
+    <label for="q32-4">4 - A little of the time</label>
+</p>
+<p>
+    <input type="radio" name="q32" id="q32-5">
+    <label for="q32-5">5 - None of the time</label>
+</p>
+</fieldset>
+
+<div class="overflow-x">
+<fieldset>
+<p class="question">How TRUE or FALSE is <strong>each</strong> of the following statements for you.</p>
+
+<table class="full">
+<thead>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <label id="statement1">Definitely true</label>
+    </td>
+    <td>
+        <label id="statement2">Mostly true</label>
+    </td>
+    <td>
+        <label id="statement3">Don't know</label>
+    </td>
+    <td>
+        <label id="statement4">Mostly false</label>
+    </td>
+    <td>
+        <label id="statement5">Definitely false</label>
+    </td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>
+        <p>33. I seem to get sick a little easier than other people</p>
+    </td>
+    <td>
+        <input type="radio" name="q33" id="q33-1" aria-labelledby="statement1">
+        <label for="q33-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q33" id="q33-2" aria-labelledby="statement2">
+        <label for="q33-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q33" id="q33-3" aria-labelledby="statement3">
+        <label for="q33-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q33" id="q33-4" aria-labelledby="statement4">
+        <label for="q33-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q33" id="q33-5" aria-labelledby="statement5">
+        <label for="q33-5">5</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>34. I am as healthy as anybody I know</p>
+    </td>
+    <td>
+        <input type="radio" name="q34" id="q34-1" aria-labelledby="statement1">
+        <label for="q34-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q34" id="q34-2" aria-labelledby="statement2">
+        <label for="q34-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q34" id="q34-3" aria-labelledby="statement3">
+        <label for="q34-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q34" id="q34-4" aria-labelledby="statement4">
+        <label for="q34-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q34" id="q34-5" aria-labelledby="statement5">
+        <label for="q34-5">5</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>35. I expect my health to get worse</p>
+    </td>
+    <td>
+        <input type="radio" name="q35" id="q35-1" aria-labelledby="statement1">
+        <label for="q35-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q35" id="q35-2" aria-labelledby="statement2">
+        <label for="q35-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q35" id="q35-3" aria-labelledby="statement3">
+        <label for="q35-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q35" id="q35-4" aria-labelledby="statement4">
+        <label for="q35-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q35" id="q35-5" aria-labelledby="statement5">
+        <label for="q35-5">5</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>36. My health is excellent</p>
+    </td>
+    <td>
+        <input type="radio" name="q36" id="q36-1" aria-labelledby="statement1">
+        <label for="q36-1">1</label>
+    </td>
+    <td>
+        <input type="radio" name="q36" id="q36-2" aria-labelledby="statement2">
+        <label for="q36-2">2</label>
+    </td>
+    <td>
+        <input type="radio" name="q36" id="q36-3" aria-labelledby="statement3">
+        <label for="q36-3">3</label>
+    </td>
+    <td>
+        <input type="radio" name="q36" id="q36-4" aria-labelledby="statement4">
+        <label for="q36-4">4</label>
+    </td>
+    <td>
+        <input type="radio" name="q36" id="q36-5" aria-labelledby="statement5">
+        <label for="q36-5">5</label>
+    </td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+</div>
+
+<input type="reset" value="Clear Answers" name="reset" class="btn">
+<input type="button" value="Print" class="print btn">
+</form>
+
+</main>
+
+</body>
+</html>

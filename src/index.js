@@ -26,6 +26,17 @@ const server = http.createServer((request, response) => {
         response.setHeader('Content-Type', 'image/jpeg');
         content = fs.readFileSync('public' + path);
         break;
+    case '/img/heart-rate-16.png':
+    case '/img/heart-rate-24.png':
+    case '/img/heart-rate-32.png':
+    case '/img/heart-rate-64.png':
+    case '/img/heart-rate-128.png':
+    case '/img/heart-rate-256.png':
+    case '/img/heart-rate-512.png':
+        response.statusCode = 200;
+        response.setHeader('Content-Type', 'image/png');
+        content = fs.readFileSync('public' + path);
+        break;
     default:
         response.statusCode = 404;
         response.setHeader('Content-Type', 'text/html');

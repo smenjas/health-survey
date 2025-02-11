@@ -14,3 +14,7 @@ Start the node server with:
 ```sh
 npm run dev
 ```
+
+---
+
+[Heart rate icons created by Bert Flint - Flaticon](https://www.flaticon.com/free-icons/heart-rate)

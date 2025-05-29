@@ -184,16 +184,29 @@ function renderResults(averages) {
     for (const category in averages) {
         const average = averages[category].toFixed(0).toLocaleString();
         if (isNaN(average)) {
-            html += `<p>${category}: not enough data.</p>`;
+            const span = `<span class="emoji"></span>`;
+            html += `<p>${span} ${category}: not enough data.</p>`;
             continue;
         }
         const mean = categories[category].mean;
-        let how = (average === mean) ? 'exactly' :
-            (average > mean) ? 'better than' : 'worse than';
+        let how = '';
+        let emoji = '';
+        if (average > mean) {
+            how = 'better than';
+            emoji = '&#9989;' // happy
+        }
+        else if (average < mean) {
+            how = 'worse than';
+            emoji = '&#10060;' // worried
+        }
+        else {
+            emoji = '&#9989;' // relieved
+        }
         if (Math.abs(mean - average) > categories[category].sd) {
             how = 'much ' + how;
         }
-        html += `<p>${category}: ${average}, which is ${how} average.</p>`;
+        html += `<p><span class="emoji">${emoji}</span> `;
+        html += `${category}: ${average}, which is ${how} average.</p>`;
     }
     return html;
 }

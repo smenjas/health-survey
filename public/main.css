@@ -25,6 +25,7 @@ h1 {
 
 .emoji {
     display: inline-block;
+    margin-right: 0.25rem;
     width: 1rem;
 }
 

@@ -179,6 +179,21 @@ function averageScores(scores) {
     return averages;
 }
 
+function renderResults(averages) {
+    let html = '';
+    for (const category in averages) {
+        const average = averages[category].toFixed(2).toLocaleString();
+        const mean = categories[category].mean;
+        let relative = (average === mean) ? 'exactly' :
+            (average > mean) ? 'above' : 'below';
+        if (Math.abs(mean - average) > categories[category].sd) {
+            relative = 'well ' + relative;
+        }
+        html += `<p>${category}: ${average}, which is ${relative} average.</p>`;
+    }
+    return html;
+}
+
 // Parse a radio button ID into a question number and value.
 function parseId(id) {
     const [name, value] = id.split('-');
@@ -202,6 +217,7 @@ for (const radio of radios) {
         answers[question - 1] = value;
         const scores = scoreSurvey(answers);
         const averages = averageScores(scores);
+        document.getElementById('results').innerHTML = renderResults(averages);
         localStorage.setItem('answers', JSON.stringify(answers));
     });
 }

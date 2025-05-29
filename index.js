@@ -1,3 +1,46 @@
+const categories = {
+    'Physical functioning': {
+        mean: 70.61,
+        sd: 27.42,
+        questions: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    'Role limitations due to physical health': {
+        mean: 52.97,
+        sd: 40.78,
+        questions: [13, 14, 15, 16]
+    },
+    'Role limitations due to emotional problems': {
+        mean: 65.78,
+        sd: 40.71,
+        questions: [17, 18, 19]
+    },
+    'Energy/fatigue': {
+        mean: 52.15,
+        sd: 22.39,
+        questions: [23, 27, 29, 31]
+    },
+    'Emotional well-being': {
+        mean: 70.38,
+        sd: 21.97,
+        questions: [24, 25, 26, 28, 30]
+    },
+    'Social functioning': {
+        mean: 78.77,
+        sd: 25.43,
+        questions: [20, 32]
+    },
+    'Pain': {
+        mean: 70.77,
+        sd: 25.46,
+        questions: [21, 22]
+    },
+    'General health': {
+        mean: 56.99,
+        sd: 21.11,
+        questions: [1, 33, 34, 35, 36]
+    }
+};
+
 // Binary ascending
 function a2(value) {
     switch (value) {
@@ -111,6 +154,31 @@ function scoreSurvey(answers) {
     return scores;
 }
 
+function selectScores(questions, scores) {
+    const selection = [];
+    for (const question of questions) {
+        const index = question - 1;
+        selection.push(scores[index]);
+    }
+    return selection;
+}
+
+function computeMean(numbers) {
+    if (numbers.length === 0) {
+        return 0;
+    }
+    return numbers.reduce((sum, n) => sum + n, 0) / numbers.length;
+}
+
+function averageScores(scores) {
+    const averages = {};
+    for (const category in categories) {
+        const questions = categories[category].questions;
+        averages[category] = computeMean(selectScores(questions, scores));
+    }
+    return averages;
+}
+
 // Parse a radio button ID into a question number and value.
 function parseId(id) {
     const [name, value] = id.split('-');
@@ -133,6 +201,7 @@ for (const radio of radios) {
         const [question, value] = parseId(event.target.id);
         answers[question - 1] = value;
         const scores = scoreSurvey(answers);
+        const averages = averageScores(scores);
         localStorage.setItem('answers', JSON.stringify(answers));
     });
 }

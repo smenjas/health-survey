@@ -1,6 +1,6 @@
 {
   "name": "health-survey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "RAND Health Care's Short Form Survey Instrument for physical, emotional, and social health",
   "main": "index.js",

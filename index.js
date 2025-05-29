@@ -188,12 +188,12 @@ function renderResults(averages) {
             continue;
         }
         const mean = categories[category].mean;
-        let relative = (average === mean) ? 'exactly' :
-            (average > mean) ? 'above' : 'below';
+        let how = (average === mean) ? 'exactly' :
+            (average > mean) ? 'better than' : 'worse than';
         if (Math.abs(mean - average) > categories[category].sd) {
-            relative = 'well ' + relative;
+            how = 'much ' + how;
         }
-        html += `<p>${category}: ${average}, which is ${relative} average.</p>`;
+        html += `<p>${category}: ${average}, which is ${how} average.</p>`;
     }
     return html;
 }

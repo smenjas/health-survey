@@ -204,8 +204,11 @@ const answers = JSON.parse(localStorage.getItem('answers')) || [];
 
 // Restore answers after reloading the page.
 for (const index in answers) {
-    const question = parseInt(index) + 1;
     const answer = answers[index];
+    if (answer === null) {
+        continue;
+    }
+    const question = parseInt(index) + 1;
     document.getElementById(`q${question}-${answer}`).checked = true;
 }
 

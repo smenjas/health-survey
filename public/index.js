@@ -226,10 +226,17 @@ for (const index in answers) {
 const radios = document.querySelectorAll('input[type=radio]');
 
 for (const radio of radios) {
-    radio.addEventListener('click', (event) => {
+    radio.addEventListener('click', event => {
         const [question, value] = parseId(event.target.id);
         answers[question - 1] = value;
         updateResults(answers);
         localStorage.setItem('answers', JSON.stringify(answers));
     });
 }
+
+const reset = document.querySelector('input[type=reset]');
+reset.addEventListener('click', event => {
+    answers.fill(null);
+    updateResults(answers);
+    localStorage.setItem('answers', JSON.stringify(answers));
+});

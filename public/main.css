@@ -41,3 +41,9 @@ h1 {
         background: black;
     }
 }
+
+@media print {
+    .btn {
+        display: none;
+    }
+}

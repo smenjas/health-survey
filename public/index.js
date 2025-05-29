@@ -198,6 +198,12 @@ function renderResults(averages) {
     return html;
 }
 
+function updateResults(answers) {
+    const scores = scoreSurvey(answers);
+    const averages = averageScores(scores);
+    document.getElementById('results').innerHTML = renderResults(averages);
+}
+
 // Parse a radio button ID into a question number and value.
 function parseId(id) {
     const [name, value] = id.split('-');
@@ -205,6 +211,7 @@ function parseId(id) {
 }
 
 const answers = JSON.parse(localStorage.getItem('answers')) || [];
+updateResults(answers);
 
 // Restore answers after reloading the page.
 for (const index in answers) {
@@ -222,9 +229,7 @@ for (const radio of radios) {
     radio.addEventListener('click', (event) => {
         const [question, value] = parseId(event.target.id);
         answers[question - 1] = value;
-        const scores = scoreSurvey(answers);
-        const averages = averageScores(scores);
-        document.getElementById('results').innerHTML = renderResults(averages);
+        updateResults(answers);
         localStorage.setItem('answers', JSON.stringify(answers));
     });
 }

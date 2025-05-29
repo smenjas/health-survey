@@ -182,7 +182,7 @@ function averageScores(scores) {
 function renderResults(averages) {
     let html = '';
     for (const category in averages) {
-        const average = averages[category].toFixed(2).toLocaleString();
+        const average = averages[category].toFixed(0).toLocaleString();
         if (isNaN(average)) {
             html += `<p>${category}: not enough data.</p>`;
             continue;

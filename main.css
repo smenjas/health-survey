@@ -23,6 +23,10 @@ h1 {
     margin: 0;
 }
 
+td:has(input) {
+    white-space: nowrap;
+}
+
 .emoji {
     display: inline-block;
     margin-right: 0.25rem;

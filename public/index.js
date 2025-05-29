@@ -183,6 +183,10 @@ function renderResults(averages) {
     let html = '';
     for (const category in averages) {
         const average = averages[category].toFixed(2).toLocaleString();
+        if (isNaN(average)) {
+            html += `<p>${category}: not enough data.</p>`;
+            continue;
+        }
         const mean = categories[category].mean;
         let relative = (average === mean) ? 'exactly' :
             (average > mean) ? 'above' : 'below';

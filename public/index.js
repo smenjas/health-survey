@@ -240,3 +240,8 @@ reset.addEventListener('click', event => {
     updateResults(answers);
     localStorage.setItem('answers', JSON.stringify(answers));
 });
+
+const print = document.querySelector('input[value=Print]');
+print.addEventListener('click', event => {
+    window.print();
+});

@@ -193,14 +193,14 @@ function renderResults(averages) {
         let emoji = '';
         if (average > mean) {
             how = 'better than';
-            emoji = '&#9989;' // happy
+            emoji = '&#9989;';
         }
         else if (average < mean) {
             how = 'worse than';
-            emoji = '&#10060;' // worried
+            emoji = '&#10060;';
         }
         else {
-            emoji = '&#9989;' // relieved
+            emoji = '&#9989;';
         }
         if (Math.abs(mean - average) > categories[category].sd) {
             how = 'much ' + how;

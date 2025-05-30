@@ -5,6 +5,13 @@ Care](https://www.rand.org/health-care/surveys_tools/mos/36-item-short-form/surv
 and tallies the results using their [scoring
 instructions](https://www.rand.org/health-care/surveys_tools/mos/36-item-short-form/scoring.html).
 
+## Privacy
+
+[This app](https://smenjas.github.io/health-survey/) does not collect your
+answers. Results are private. Neither the developers nor the hosting provider
+can see your input. The "Clear Answers" button immediately deletes all data
+from the browser.
+
 ## Development
 Install the dependencies by running:
 ```sh

@@ -23,6 +23,10 @@ h1 {
     margin: 0;
 }
 
+[title] {
+    cursor: help;
+}
+
 td:has(input) {
     white-space: nowrap;
 }

@@ -1,3 +1,5 @@
+import zTable from './z-table.js';
+
 const categories = {
     'Physical functioning': {
         mean: 70.61,
@@ -170,6 +172,10 @@ function computeMean(numbers) {
     return numbers.reduce((sum, n) => sum + n, 0) / numbers.length;
 }
 
+function computeZScore(value, mean, sd) {
+    return (value - mean) / sd;
+}
+
 function averageScores(scores) {
     const averages = {};
     for (const category in categories) {
@@ -188,7 +194,9 @@ function renderResults(averages) {
             html += `<p>${span} ${category}: not enough data.</p>`;
             continue;
         }
-        const mean = categories[category].mean;
+        const { mean, sd } = categories[category];
+        const z = computeZScore(average, mean, sd);
+        const percentile = Math.round(zTable[z.toFixed(2)] / 1000);
         let how = '';
         let emoji = '';
         if (average > mean) {
@@ -205,7 +213,8 @@ function renderResults(averages) {
         if (Math.abs(mean - average) > categories[category].sd) {
             how = 'much ' + how;
         }
-        html += `<p><span class="emoji">${emoji}</span> `;
+        const title = `Your score is better than ${percentile}% of people.`;
+        html += `<p title="${title}"><span class="emoji">${emoji}</span> `;
         html += `${category}: ${average}, which is ${how} average.</p>`;
     }
     return html;

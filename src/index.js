@@ -31,13 +31,20 @@ const server = http.createServer((request, response) => {
         response.setHeader('Content-Type', 'image/jpeg');
         content = fs.readFileSync('public' + path);
         break;
-    case '/img/apple-touch-icon.png':
     case '/img/heart-rate-16.png':
-    case '/img/heart-rate-24.png':
     case '/img/heart-rate-32.png':
-    case '/img/heart-rate-64.png':
+    case '/img/heart-rate-57.png':
+    case '/img/heart-rate-60.png':
+    case '/img/heart-rate-70.png':
+    case '/img/heart-rate-72.png':
+    case '/img/heart-rate-76.png':
+    case '/img/heart-rate-96.png':
+    case '/img/heart-rate-120.png':
     case '/img/heart-rate-128.png':
-    case '/img/heart-rate-256.png':
+    case '/img/heart-rate-152.png':
+    case '/img/heart-rate-167.png':
+    case '/img/heart-rate-180.png':
+    case '/img/heart-rate-192.png':
     case '/img/heart-rate-512.png':
         response.statusCode = 200;
         response.setHeader('Content-Type', 'image/png');
